@@ -45,7 +45,40 @@
   </dependencies>
 
   <build>
+<!-- 
+        <resources>
+            <resource>
+                <directory>src/non-packaged-resources</directory>
+                <filtering>true</filtering>
+                <includes>
+                    <include>**/*</include>
+                </includes>
+            </resource>
+        </resources> -->
+
+   <!-- <resources>
+     <resource>
+       <directory>src/non-packaged-resources</directory>
+     </resource>
+   </resources> -->
+
     <plugins>
+      <plugin>
+        <artifactId>maven-resources-plugin</artifactId>
+        <version>3.1.0</version>
+        <configuration>
+          <goal>copy-resources</goal>
+          <outputDirectory>${basedir}/target/extra-resources</outputDirectory>
+          <resources>          
+            <resource>
+              <directory>src/non-packaged-resources</directory>
+              <filtering>true</filtering>
+            </resource>
+          </resources>              
+        </configuration>            
+      </plugin> 
+
+
       <!-- tag::build[] -->
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
@@ -72,8 +105,12 @@
 
       <!-- Enable liberty-maven plugin -->
       <plugin>
-        <groupId>net.wasdev.wlp.maven.plugins</groupId>
+        <!-- <groupId>net.wasdev.wlp.maven.plugins</groupId>
+        <artifactId>liberty-maven-plugin</artifactId> -->
+        
+        <groupId>io.openliberty.tools</groupId>
         <artifactId>liberty-maven-plugin</artifactId>
+        <version>3.0.1</version>
         <configuration>
           <assemblyArtifact>
             <groupId>io.openliberty</groupId>
