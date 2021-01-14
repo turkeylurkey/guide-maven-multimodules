@@ -15,6 +15,7 @@
     <enterpriseApplication id="guide-maven-multimodules-ear"
         location="guide-maven-multimodules-ear.ear"
         name="guide-maven-multimodules-ear" />
+
     <!-- end::EARdefinition[] -->
     <!-- end::server[] -->
 </server>

@@ -20,7 +20,9 @@
     <!-- tag::modules[] -->
     <modules>
         <module>jar</module>
+        <module>jar2</module>
         <module>war</module>
+        <module>war2</module>
         <module>ear</module>
     </modules>
     <!-- end::modules[] -->

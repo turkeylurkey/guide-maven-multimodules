@@ -15,7 +15,7 @@
 <title>Height Converter</title>
 </head>
 <body>
-    <h1>Height Converter WAR1</h1>
+    <h1>Height Converter WAR2</h1>
 
     <jsp:useBean id="height" class="io.openliberty.guides.multimodules.web.HeightsBean"></jsp:useBean>
     <jsp:setProperty name="height" property="heightCm" />

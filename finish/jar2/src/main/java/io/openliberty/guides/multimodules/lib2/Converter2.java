@@ -10,9 +10,9 @@
  *     IBM Corporation - Initial implementation
  *******************************************************************************/
 // end::comment[]
-package io.openliberty.guides.multimodules.lib;
+package io.openliberty.guides.multimodules.lib2;
 
-public class Converter {
+public class Converter2 {
 
     public static int getFeet(int cm) {
         int feet = (int) (cm / 30.48);
@@ -42,7 +42,7 @@ public class Converter {
     }
 
     public static String getId() {
-        return "jar1";
+        return "jar2";
     }
 
 }

@@ -27,7 +27,7 @@ public class HeightsBean implements java.io.Serializable {
     // If first letter is not capitalized, it must match the property name in
     // index.jsp
     public String getHeightCm() {
-        return heightCm + " from WAR1 with jar " + io.openliberty.guides.multimodules.lib.Converter.getId() + " and second jar " + io.openliberty.guides.multimodules.lib2.Converter2.getId();
+        return heightCm + " from WAR2 with jar " + io.openliberty.guides.multimodules.lib.Converter.getId() + " and second jar " + io.openliberty.guides.multimodules.lib2.Converter2.getId();
     }
 
     public String getHeightFeet() {

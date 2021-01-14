@@ -45,6 +45,25 @@
             <type>war</type>
             <!-- end::warType[] -->
         </dependency>
+
+
+        <dependency>
+            <groupId>io.openliberty.guides</groupId>
+            <artifactId>guide-maven-multimodules-jar2</artifactId>
+            <version>1.0-SNAPSHOT</version>
+            <type>jar</type>
+        </dependency>
+        <!-- end::dependency-jar[] -->
+        <!-- tag::dependency-war[] -->
+        <dependency>
+            <groupId>io.openliberty.guides</groupId>
+            <artifactId>guide-maven-multimodules-war2</artifactId>
+            <version>1.0-SNAPSHOT</version>
+            <!-- tag::warType[] -->
+            <type>war</type>
+            <!-- end::warType[] -->
+        </dependency>
+
         <!-- end::dependency-war[] -->
         <!-- end::dependencies[] -->
 
@@ -73,6 +92,11 @@
                             <artifactId>guide-maven-multimodules-jar</artifactId>
                             <uri>/guide-maven-multimodules-jar-1.0-SNAPSHOT.jar</uri>
                         </jarModule>
+                        <jarModule>
+                            <groupId>io.openliberty.guides</groupId>
+                            <artifactId>guide-maven-multimodules-jar2</artifactId>
+                            <uri>/guide-maven-multimodules-jar2-1.0-SNAPSHOT.jar</uri>
+                        </jarModule>
                         <!-- end::jarModule[] -->
                         <!-- tag::webModule[] -->
                         <webModule>
@@ -82,6 +106,15 @@
                             <!-- Set custom context root -->
                             <!-- tag::contextRoot[] -->
                             <contextRoot>/converter</contextRoot>
+                            <!-- end::contextRoot[] -->
+                        </webModule>
+                        <webModule>
+                            <groupId>io.openliberty.guides</groupId>
+                            <artifactId>guide-maven-multimodules-war2</artifactId>
+                            <uri>/guide-maven-multimodules-war2-1.0-SNAPSHOT.war</uri>
+                            <!-- Set custom context root -->
+                            <!-- tag::contextRoot[] -->
+                            <contextRoot>/converter2</contextRoot>
                             <!-- end::contextRoot[] -->
                         </webModule>
                         <!-- end::webModule[] -->
