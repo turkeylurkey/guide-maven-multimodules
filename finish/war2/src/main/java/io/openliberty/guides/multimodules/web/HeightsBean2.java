@@ -12,7 +12,7 @@
 // end::copyright[]
 package io.openliberty.guides.multimodules.web;
 
-public class HeightsBean implements java.io.Serializable {
+public class HeightsBean2 implements java.io.Serializable {
     private String heightCm = null;
     private String heightFeet = null;
     private String heightInches = null;
@@ -20,7 +20,7 @@ public class HeightsBean implements java.io.Serializable {
     private int feet = 0;
     private int inches = 0;
 
-    public HeightsBean() {
+    public HeightsBean2() {
     }
 
     // Capitalize the first letter of the name i.e. first letter after get

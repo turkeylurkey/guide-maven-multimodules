@@ -17,7 +17,7 @@
 <body>
     <h1>Height Converter WAR2</h1>
 
-    <jsp:useBean id="height" class="io.openliberty.guides.multimodules.web.HeightsBean"></jsp:useBean>
+    <jsp:useBean id="height" class="io.openliberty.guides.multimodules.web.HeightsBean2"></jsp:useBean>
     <jsp:setProperty name="height" property="heightCm" />
     <jsp:setProperty name="height" property="heightFeet" value="0" />
     <jsp:setProperty name="height" property="heightInches" value="0" />
