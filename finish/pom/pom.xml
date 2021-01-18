@@ -11,15 +11,9 @@
     <artifactId>guide-maven-multimodules-pom</artifactId>
     <version>1.0-SNAPSHOT</version>
     <!-- tag::packagingType[] -->
-    <packaging>pom</packaging>
+    <packaging>liberty-assembly</packaging>
     <!-- end::packagingType[] -->
     <!-- end::packaging[] -->
-
-    <parent>
-        <groupId>io.openliberty.tools</groupId>
-        <artifactId>liberty-maven-app-parent</artifactId>
-        <version>3.3.3</version>
-    </parent>
 
     <properties>
         <!-- Liberty configuration -->
@@ -46,6 +40,11 @@
                 <groupId>io.openliberty.tools</groupId>
                 <artifactId>liberty-maven-plugin</artifactId>
                 <version>3.3.3</version>
+                <extensions>true</extensions>
+                <configuration>
+                    <looseApplication>true</looseApplication>
+                    <deployPackages>all</deployPackages>
+                </configuration>
             </plugin>
             
             <!-- end::liberty-maven-plugin[] -->
