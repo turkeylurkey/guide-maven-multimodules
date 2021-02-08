@@ -24,6 +24,7 @@
         <module>war</module>
         <module>war2</module>
         <module>ear</module>
+        <module>ear2</module>
         <module>pom</module>
     </modules>
     <!-- end::modules[] -->
