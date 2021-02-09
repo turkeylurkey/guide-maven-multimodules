@@ -18,6 +18,9 @@
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
+        <!-- Liberty configuration -->
+        <liberty.var.default.http.port>9080</liberty.var.default.http.port>
+        <liberty.var.default.https.port>9443</liberty.var.default.https.port>
     </properties>
 
     <dependencies>
@@ -58,5 +61,39 @@
         <!-- end::dependency[] -->
 
     </dependencies>
+
+
+    <build>
+        <finalName>${project.artifactId}</finalName>
+        <plugins>
+           
+            <!-- Enable liberty-maven plugin -->
+            <!-- tag::liberty-maven-plugin[] -->
+            <plugin>
+                <groupId>io.openliberty.tools</groupId>
+                <artifactId>liberty-maven-plugin</artifactId>
+                <version>3.3.3</version>
+            </plugin>
+            <!-- end::liberty-maven-plugin[] -->
+
+            <!-- Plugin to run integration tests -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-failsafe-plugin</artifactId>
+                <version>2.22.2</version>
+                <configuration>
+                    <systemPropertyVariables>
+                        <default.http.port>
+                            ${liberty.var.default.http.port}
+                        </default.http.port>
+                        <default.https.port>
+                            ${liberty.var.default.https.port}
+                        </default.https.port>
+                        <cf.context.root>/converter</cf.context.root>
+                    </systemPropertyVariables>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
 
 </project>
