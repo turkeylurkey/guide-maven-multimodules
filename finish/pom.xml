@@ -6,18 +6,11 @@
 
     <modelVersion>4.0.0</modelVersion>
 
-    <!-- tag::packaging[] -->
-    <!-- tag::groupId[] -->
     <groupId>io.openliberty.guides</groupId>
-    <!-- end::groupId[] -->
     <artifactId>guide-maven-multimodules</artifactId>
     <version>1.0-SNAPSHOT</version>
-    <!-- tag::packagingType[] -->
     <packaging>pom</packaging>
-    <!-- end::packagingType[] -->
-    <!-- end::packaging[] -->
 
-    <!-- tag::modules[] -->
     <modules>
         <module>jar</module>
         <module>jar2</module>
@@ -25,5 +18,4 @@
         <module>war2</module>
         <module>ear</module>
     </modules>
-    <!-- end::modules[] -->
 </project>
